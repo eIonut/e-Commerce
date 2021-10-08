@@ -1,0 +1,18 @@
+session
+cookies
+mongoose
+express
+ejs
+ejs-mate
+method-override
+node
+html
+client-side js
+express router
+site despre tricouri
+
+confirmare mail la cumparare
+
+Promocode ?
+
+la home page, sa apara litera cu litera welcome to legolos
