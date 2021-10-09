@@ -16,3 +16,17 @@ confirmare mail la cumparare
 Promocode ?
 
 la home page, sa apara litera cu litera welcome to legolos
+
+Filtre stanga:
+- dupa pret 
+- nume
+
+Produsul:
+-poza
+-pret
+-descriere
+-adauga in cos
+
+Sa poti sa dai pe poza sa vezi si sa intrii pe pagina fiecarui produs apoi
+
+PRODUSE: oja, ruj, paleta farduri, rimel
