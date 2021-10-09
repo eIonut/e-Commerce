@@ -272,7 +272,7 @@ h5 {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   nav {
-    font-size: 2.5em;
+    font-size: 3em;
     height: 100px;
     display: flex;
     flex-direction: row;
