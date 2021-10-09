@@ -221,7 +221,7 @@ h5 {
   #register-form {
     border: 2px solid white;
     width: 80%;
-    height: 350px;
+    height: fit-content;
     border-radius: 10px;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -247,30 +247,7 @@ h5 {
   }
 
   body {
-    background: hsla(184, 82%, 51%, 1);
-
-    background: linear-gradient(
-      90deg,
-      hsla(184, 82%, 51%, 1) 0%,
-      hsla(275, 77%, 70%, 1) 50%,
-      hsla(351, 88%, 62%, 1) 100%
-    );
-
-    background: -moz-linear-gradient(
-      90deg,
-      hsla(184, 82%, 51%, 1) 0%,
-      hsla(275, 77%, 70%, 1) 50%,
-      hsla(351, 88%, 62%, 1) 100%
-    );
-
-    background: -webkit-linear-gradient(
-      90deg,
-      hsla(184, 82%, 51%, 1) 0%,
-      hsla(275, 77%, 70%, 1) 50%,
-      hsla(351, 88%, 62%, 1) 100%
-    );
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1CDCE8", endColorstr="#BB77ED", GradientType=1 );
+    background: black;
   }
 
   nav {
