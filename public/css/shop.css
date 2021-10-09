@@ -43,7 +43,14 @@ a:visited {
 h1,
 h2,
 html,
-body {
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   padding: 0;
 }
@@ -60,7 +67,9 @@ body {
 
   height: fit-content;
 }
-
+nav a {
+  font-size: 1.2em;
+}
 main {
   display: grid;
   grid-gap: 10px;
@@ -77,7 +86,7 @@ main {
   grid-row: 1 / 6;
   grid-column: 1;
   background: transparent;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -106,7 +115,6 @@ ul {
   height: 100%;
   margin: auto;
   text-align: center;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,8 +133,10 @@ ul {
 }
 
 .item-rows button {
-  padding: 5px 10px;
-  font-size: 1.3em;
+  font-family: inherit;
+  font-weight: bolder;
+  padding: 10px 10px;
+  font-size: 1.4em;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
@@ -138,6 +148,7 @@ ul {
   border-color: rgb(224, 90, 147);
   cursor: pointer;
 }
+
 img {
   border-radius: 5px;
   width: 300px;
@@ -199,66 +210,289 @@ i:hover {
   cursor: pointer;
 }
 
-@media (orientation: portrait) {
-  section {
-    padding: 0px 20px;
-    padding-bottom: 200px;
+/* On screens that are 600px or less, set the background color to olive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #filter h2:nth-of-type(1) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter h2:nth-of-type(2) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px 0px;
   }
   main {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
-  img {
-    width: 400px;
-    height: 300px;
-    background-position: middle;
+
+  #filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
+
+  #filter {
+    padding: 10px 10px;
+    text-align: center;
+  }
+
   nav {
-    font-size: 1.7em;
-    display: grid;
+    font-size: 2em;
     height: fit-content;
-    grid-template-columns: repeat(3, 1fr) !important;
-    grid-template-rows: repeat(4, 50px) !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px 0px;
+  }
+  #filter h2,
+  #filter h3 {
+    padding: 5px 0px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  nav {
+    font-size: 2.5em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
   }
 
   nav a {
     padding: 10px 0px;
   }
 
-  #product-number::after {
-    position: relative;
-    bottom: 15px;
+  #filter-section {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 80px;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    margin: auto;
+    width: 100%;
   }
 
-  #logo:nth-of-type(1) {
-    grid-row: 1/5;
-    grid-column: 1;
-    font-size: 1.4em;
-    transform: rotate(90deg);
+  #filter {
+    grid-row: 1/3;
+    width: 80%;
+    margin: auto;
+  }
+
+  #filter h2:nth-of-type(1) {
     margin: auto;
     text-align: center;
   }
 
-  a:nth-of-type(2) {
+  #filter h2:nth-of-type(2) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px 0px;
+  }
+  #filter h2,
+  #filter h3 {
+    padding: 5px 0px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    margin: 0px 20px;
+  }
+
+  img {
+    width: 90%;
+    height: 90%;
+  }
+
+  nav {
+    font-size: 2.5em;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav a {
+    padding: 10px 0px;
+  }
+  #filter h2:nth-of-type(1) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter {
+    padding: 0px !important;
+    margin-bottom: 20px;
+  }
+
+  #filter-section {
+    padding: 0;
+  }
+
+  #filter h2:nth-of-type(2) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px 0px;
+  }
+  #filter h2,
+  #filter h3 {
+    padding: 5px 0px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    margin: 0px 20px;
+  }
+
+  #filter-section {
+    grid-row: 1/7;
+    height: 100%;
+    grid-column: 1;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  #filter {
+    font-size: 1.2em;
     grid-row: 1;
-    grid-column: 1/4;
+    text-align: center;
+    width: 80%;
+    height: 300px;
     margin: auto;
-  }
-
-  a:nth-of-type(3) {
-    grid-row: 2;
-    grid-column: 1/4;
+    padding: 10px 10px;
+    justify-content: space-between;
     margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 400%;
+  }
+  #filter h2:nth-of-type(1) {
+    margin: auto;
+    text-align: center;
   }
 
-  section h2 {
-    padding-top: 40px;
+  #filter h2:nth-of-type(2) {
+    margin: auto;
+    text-align: center;
   }
 
-  #loginShop {
-    grid-row: 3/5;
-    grid-column: 2/3;
+  #filter ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px 0px;
+  }
+  #filter h2,
+  #filter h3 {
+    padding: 5px 0px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  main {
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    margin: 0;
+    padding-top: 100px;
+  }
+
+  #filter-section {
+    grid-row: 1/7;
+    height: 100%;
+    grid-column: 1;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 0;
+  }
+  #filter {
+    font-size: 1.2em;
+    grid-row: 1;
+    display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 210%;
+  }
+
+  #filter h2:nth-of-type(1) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter h2:nth-of-type(2) {
+    margin: auto;
+    text-align: center;
+  }
+
+  #filter ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px 0px;
+  }
+
+  #filter h2,
+  #filter h3 {
+    padding: 5px 0px;
   }
 }
