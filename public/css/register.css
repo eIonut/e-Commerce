@@ -237,8 +237,13 @@ h5 {
     padding-bottom: 20px;
   }
 
-  main {
+  #rgister-form {
+    top: 50px;
     position: relative;
+  }
+
+  main {
+    position: absolute;
   }
 
   nav {
